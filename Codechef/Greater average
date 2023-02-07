@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int T;
+    cin>>T;
+    while(T!=0)
+	{int A,B,C;
+	cin>>A>>B>>C;
+	float average=(float)(A+B)/(float)(2);
+	if(average>C)
+	{
+	    cout<<"Yes"<<endl;
+	}
+	else
+	{
+	    cout<<"No"<<endl;
+	}
+	T--;
+	}
+	return 0;
+}
