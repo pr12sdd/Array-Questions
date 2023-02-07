@@ -1,0 +1,27 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int T;
+    cin>>T;
+    while(T!=0)
+	{int N,X;
+	cin>>N>>X;
+	int number_left=N-X;
+	int packets=number_left/4;
+	if(number_left<0)
+	{
+	    cout<<"0"<<endl;
+	}
+	else if(number_left%4!=0)
+	{
+	    cout<<packets+1<<endl;
+	}
+	else
+	{
+	    cout<<packets<<endl;
+	}
+	T--;
+	}
+	return 0;
+}
