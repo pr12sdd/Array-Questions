@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int T;
+    cin>>T;
+    while(T!=0)
+	{int X,Y;
+	cin>>X>>Y;
+	int percent=((float)(Y)/(float)(X))*100;
+	if(percent>=50)
+	{
+	    cout<<"Yes"<<endl;
+	}
+	else
+	{
+	    cout<<"No"<<endl;
+	}
+	T--;
+	}
+	return 0;
+}
