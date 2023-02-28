@@ -1,0 +1,26 @@
+int smallestSubWithSum(int arr[], int n, int x)
+    {
+        int sum=0;
+        int i=0;
+        int j=0;
+        int count=INT_MAX;
+        while(j<n)
+        {
+            sum=sum+arr[j];
+            while(sum>x)
+            {
+                sum=sum-arr[i];
+                if(sum>x)
+                {i++;  }
+                else
+                {
+                    sum=sum+arr[i];
+                    count=min(count,j-i+1);
+                    break;
+                }
+                
+            }
+            j++;
+        }
+        return count;
+    }
