@@ -1,0 +1,24 @@
+vector<long long> nextLargerElement(vector<long long> &arr, int n){
+        stack<long long> m;
+        m.push(arr[n-1]);
+        vector<long long> k;
+        k.push_back(-1);
+        for(int i=n-2;i>=0;i--)
+        {
+            while(!m.empty() && m.top()<=arr[i])
+            {
+                m.pop();
+            }
+            if(m.empty())
+            {
+                k.push_back(-1);
+            }
+            else
+            {
+                k.push_back(m.top());
+            }
+            m.push(arr[i]);
+        }
+        reverse(k.begin(),k.end());
+        return k;
+    }
